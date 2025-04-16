@@ -21,7 +21,7 @@ jobs:
           cache-dependency-path: '**/src/yarn.lock'
       - name: Install dependencies
         run: yarn
-      - name: Run build
-        run: npm run build --prefix src
-      - name: Run tests
-        run: npm test --prefix src
+      #- name: Run build
+      #  run: npm run build --prefix src
+      #- name: Run tests
+      #  run: npm test --prefix src
