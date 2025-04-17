@@ -1,0 +1,20 @@
+﻿name: mantine-ui
+
+services:
+
+  web-app:
+    image: hubviwe/mantine.ui.web.app:0.0.1
+    container_name: mantine-ui-web-app
+    hostname: web-app
+    build:
+      context: src/
+      dockerfile: Dockerfile
+    develop:
+      watch:
+        - action: rebuild
+          path: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
